@@ -1,9 +1,9 @@
-import './App.css';
+import "./App.css";
 
 export default function App() {
-	return (
-		<main className='App'>
-			App
-		</main>
-	);
+  return (
+    <main className="App">
+      App
+    </main>
+  );
 }
