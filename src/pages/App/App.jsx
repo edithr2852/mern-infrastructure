@@ -8,7 +8,7 @@ import NavBar from "../../Components/NavBar/NavBar";
 import "./App.css";
 
 export default function App() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
 
   return (
     <main className="App">
