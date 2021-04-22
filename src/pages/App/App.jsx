@@ -1,10 +1,12 @@
-import './App.css';
+import { useState } from "react";
+import AuthPage from "../AuthPage/AuthPage";
+import NewOrderPage from "../NewOrderPage/NewOrderPage";
+import OrderHistoryPage from "../OrderHistoryPage/OrderHistoryPage";
+
+import "./App.css";
 
 export default function App() {
-	return (
-		<main className='App'>
-			App
-      <h4>Hello world</h4>
-		</main>
-	);
+  const [user, setUser] = useState(null);
+
+  return <main className="App">{user ? <NewOrderPage /> : <AuthPage />}</main>;
 }
