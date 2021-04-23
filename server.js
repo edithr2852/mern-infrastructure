@@ -23,6 +23,8 @@ app.listen(port, function () {
 });
 
 //api routes will go here
+app.use('/api/users', require('./routes/api/users'))
+
 
 // The following "catch all" route (note the *) is necessary
 app.get('/*', function (req, res) {
