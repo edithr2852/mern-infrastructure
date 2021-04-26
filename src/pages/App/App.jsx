@@ -10,7 +10,6 @@ import './App.css';
 
 export default function App() {
 	const [user, setUser] = useState(getUser());
-	console.log('user stored in state => ', user);
 
 	return (
 		<main className='App'>
