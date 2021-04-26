@@ -23,6 +23,7 @@ app.listen(port, function () {
 });
 
 //api routes will go here
+// app.use('/api/users', require('./routes/api/users'))
 app.use('/api/users', require('./routes/api/users'))
 
 
