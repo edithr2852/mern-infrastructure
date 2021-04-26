@@ -37,6 +37,11 @@ export function logOut() {
 	localStorage.removeItem('token');
 }
 
+export function checkToken() {
+	// Just so you don't forget how to use .then
+	return usersAPI.checkToken().then(dateStr => new Date(dateStr));
+}
+
 export async function login(credentials) {
 	try {
 		// Delegate the network request code to the users-api.js API module
