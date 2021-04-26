@@ -39,7 +39,9 @@ export function logOut() {
 
 export function checkToken() {
 	// Just so you don't forget how to use .then
-	return usersAPI.checkToken().then(dateStr => new Date(dateStr));
+	return usersAPI
+		.checkToken()
+		.then(dateStr => console.log(new Date(dateStr)));
 }
 
 export async function login(credentials) {
