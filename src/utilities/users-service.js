@@ -13,11 +13,6 @@ export async function signUp(userData) {
 	}
 }
 
-// Retrieve the token from local storage
-// If there isn't a token, set the user to null
-// If there's an expired token, remove it from localStorage and set the user state to null
-// If the token hasn't expired, extract the user object and set the user to state
-
 export function getToken() {
 	// getItem returns null if there's no string
 	const token = localStorage.getItem('token');
@@ -40,4 +35,17 @@ export function getUser() {
 
 export function logOut() {
 	localStorage.removeItem('token');
+}
+
+export async function login(credentials) {
+	try {
+		// Delegate the network request code to the users-api.js API module
+		// which will ultimately return a JWT
+		const token = await usersAPI.login(credentials);
+		// Persist the "token"
+		localStorage.setItem('token', token);
+		return getUser();
+	} catch {
+		throw new Error('Invalid Log In');
+	}
 }
