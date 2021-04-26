@@ -1,11 +1,11 @@
-import React from "react";
-import SignUpForm from "../../Components/SignUpForm/SignUpForm";
+import React from 'react';
+import SignUpForm from '../../components/SignUpForm/SignUpForm';
 
 export default function AuthPage() {
-  return (
-    <main>
-      <h1>AuthPage</h1>
-      <SignUpForm />
-    </main>
-  );
+	return (
+		<main>
+			<h1>AuthPage</h1>
+			<SignUpForm />
+		</main>
+	);
 }
